@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('links', function (Blueprint $table) {
-            $table->id();
+            $table->increments('link_id')->primary();
             $table->integer('contact_id');
             $table->string('client_code');
             $table->timestamps();
